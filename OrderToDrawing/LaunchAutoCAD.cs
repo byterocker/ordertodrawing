@@ -1,15 +1,8 @@
-<<<<<<< HEAD
 ﻿using System;
 using System.Windows;
 using System.Runtime.InteropServices;
 using System.Threading;
 using Autodesk.AutoCAD.Interop;
-=======
-﻿using Autodesk.AutoCAD.Interop;
-using System;
-using System.Runtime.InteropServices;
-using System.Windows;
->>>>>>> a25158f (Initial commit)
 
 namespace LaunchAutoCAD
 {
@@ -42,11 +35,7 @@ namespace LaunchAutoCAD
 
         private AcadApplication acadApp;
         private bool isRunning;
-<<<<<<< HEAD
         public AcadApplication AcadApp 
-=======
-        public AcadApplication AcadApp
->>>>>>> a25158f (Initial commit)
         {
             get
             {
@@ -58,22 +47,14 @@ namespace LaunchAutoCAD
         }
 
         public AcadConnection()
-<<<<<<< HEAD
         {    
-=======
-        {
->>>>>>> a25158f (Initial commit)
         }
 
         private void StartAcad()
         {
             IMessageFilter oldFilter;
             CoRegisterMessageFilter(this, out oldFilter);
-<<<<<<< HEAD
-            const string progID = "AutoCAD.Application.24";
-=======
             const string progID = "AutoCAD.Application.25";
->>>>>>> a25158f (Initial commit)
             acadApp = null;
             try
             {

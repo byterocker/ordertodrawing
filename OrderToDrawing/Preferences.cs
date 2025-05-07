@@ -1,13 +1,9 @@
-<<<<<<< HEAD
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel;
-=======
-﻿using System.ComponentModel;
->>>>>>> a25158f (Initial commit)
 using System.IO;
 using System.Windows;
 
@@ -17,12 +13,7 @@ namespace OrderToDrawing
     {
         private string namingRule;
         private string namingRuleIgnore;
-<<<<<<< HEAD
         private string csvsearchingpath;
-=======
-        private string connectionString;
-        private string jsonSearchingPath;
->>>>>>> a25158f (Initial commit)
         private string pdssearchingpath;
         private string dwgsearchingpath;
         private string dwgoutputPath;
@@ -33,16 +24,9 @@ namespace OrderToDrawing
         private string serialAtts;
         private string scriptfile;
         private string scriptfile2;
-<<<<<<< HEAD
         private string configPath;
         private string errorpath;
         private string ignoreArtikel;
-=======
-        private string errorpath;
-        private string configPath;
-        private string ignoreArtikel;
-        private bool objectIdentificatorAsBlock;
->>>>>>> a25158f (Initial commit)
         private bool logfileMode;
         private bool plot;
         private bool headerMode;
@@ -110,53 +94,17 @@ namespace OrderToDrawing
                 Properties.Settings.Default.LogFileMode = logfileMode;
                 Properties.Settings.Default.Save();
                 OnPropertyChanged("LogFileMode");
-<<<<<<< HEAD
                 
             }
         }
         public string CSVSearchingPath
         {
             get { return csvsearchingpath; }
-=======
-
-            }
-        }
-        public bool ObjectIdentificatorAsBlock
-        {
-            get { return objectIdentificatorAsBlock; }
-            set
-            {
-                objectIdentificatorAsBlock = value;
-                Properties.Settings.Default.ObjectIdentificatorAsBlock = objectIdentificatorAsBlock;
-                Properties.Settings.Default.Save();
-                OnPropertyChanged("ObjectIdentificatorAsBlock");
-
-            }
-        }
-        public string ConnectionString
-        {
-            get { return connectionString; }
-            set
-            {
-                if (value != null)
-                {
-                    connectionString = value;
-                    Properties.Settings.Default.ConnectionString = value;
-                    Properties.Settings.Default.Save();
-                    OnPropertyChanged("ConnectionString");
-                }
-            }
-        }
-        public string JsonSearchingPath
-        {
-            get { return jsonSearchingPath; }
->>>>>>> a25158f (Initial commit)
             set
             {
                 if (value != null)
                 {
                     if (!value.EndsWith("\\"))
-<<<<<<< HEAD
                         csvsearchingpath = value.TrimEnd('"') + "\\";
                     else
                         csvsearchingpath = value.TrimEnd('"');
@@ -170,26 +118,10 @@ namespace OrderToDrawing
                         Properties.Settings.Default.CSVSearchingPath = csvsearchingpath;
                         Properties.Settings.Default.Save();
                         OnPropertyChanged("CSVSearchingPath");
-=======
-                        jsonSearchingPath = value.TrimEnd('"') + "\\";
-                    else
-                        jsonSearchingPath = value.TrimEnd('"');
-                    if (!Directory.Exists(jsonSearchingPath))
-                    {
-                        MessageBox.Show($"Der Ordner {jsonSearchingPath} existiert nicht");
-                        jsonSearchingPath = Properties.Settings.Default.JsonSearchingPath;
-                    }
-                    else
-                    {
-                        Properties.Settings.Default.JsonSearchingPath = jsonSearchingPath;
-                        Properties.Settings.Default.Save();
-                        OnPropertyChanged("JsonSearchingPath");
->>>>>>> a25158f (Initial commit)
                     }
                 }
             }
         }
-<<<<<<< HEAD
         public string ConfigPath
         {
             get { return configPath; }
@@ -214,8 +146,6 @@ namespace OrderToDrawing
                 }
             }
         }
-=======
->>>>>>> a25158f (Initial commit)
         public string DWGSearchingPath
         {
             get { return dwgsearchingpath; }
@@ -294,11 +224,7 @@ namespace OrderToDrawing
         public string DWGOutputPath
         {
             get { return dwgoutputPath; }
-<<<<<<< HEAD
             set 
-=======
-            set
->>>>>>> a25158f (Initial commit)
             {
                 if (value != null)
                 {
@@ -375,22 +301,14 @@ namespace OrderToDrawing
             get { return noPDSArtikel; }
             set
             {
-<<<<<<< HEAD
                 if (value!= null)
-=======
-                if (value != null)
->>>>>>> a25158f (Initial commit)
                 {
                     noPDSArtikel = value.TrimEnd('"');
                     Properties.Settings.Default.NoPDSArtikel = noPDSArtikel;
                     Properties.Settings.Default.Save();
                     OnPropertyChanged("NoPDSArtikel");
                 }
-<<<<<<< HEAD
                 
-=======
-
->>>>>>> a25158f (Initial commit)
             }
         }
         public string IgnoreArtikel
@@ -398,22 +316,14 @@ namespace OrderToDrawing
             get { return ignoreArtikel; }
             set
             {
-<<<<<<< HEAD
                 if (value!= null)
-=======
-                if (value != null)
->>>>>>> a25158f (Initial commit)
                 {
                     ignoreArtikel = value.TrimEnd('"');
                     Properties.Settings.Default.IgnoreArtikel = ignoreArtikel;
                     Properties.Settings.Default.Save();
                     OnPropertyChanged("IgnoreArtikel");
                 }
-<<<<<<< HEAD
                 
-=======
-
->>>>>>> a25158f (Initial commit)
             }
         }
         public string SerialBlocks
@@ -481,11 +391,7 @@ namespace OrderToDrawing
                     scriptfile2 = value.TrimEnd('"');
                 if (!(scriptfile2 == null) && !File.Exists(scriptfile2))
                 {
-<<<<<<< HEAD
                     MessageBox.Show($"Das ScriptFile {scriptfile} existiert nicht");
-=======
-                    MessageBox.Show($"Das ScriptFile {scriptfile2} existiert nicht");
->>>>>>> a25158f (Initial commit)
                     scriptfile2 = Properties.Settings.Default.ScriptFile2;
                 }
                 else
@@ -497,47 +403,13 @@ namespace OrderToDrawing
             }
         }
 
-<<<<<<< HEAD
-=======
-        public string ConfigPath
-        {
-            get { return configPath; }
-            set
-            {
-                if (value == null)
-                    configPath = null;
-                else if (!value.EndsWith(".config"))
-                    configPath = value.TrimEnd('"') + ".config";
-                else
-                    configPath = value.TrimEnd('"');
-                if (!(configPath == null) && !File.Exists(configPath))
-                {
-                    MessageBox.Show($"Das Config {configPath} existiert nicht");
-                    configPath = Properties.Settings.Default.ConfigPath;
-                }
-                else
-                {
-                    Properties.Settings.Default.ConfigPath = configPath;
-                    Properties.Settings.Default.Save();
-                    OnPropertyChanged("ConfigPath");
-                }
-            }
-        }
-
->>>>>>> a25158f (Initial commit)
         public event PropertyChangedEventHandler PropertyChanged;
 
         private void OnPropertyChanged(string property)
         {
             if (PropertyChanged != null)
-<<<<<<< HEAD
             PropertyChanged(this, new PropertyChangedEventArgs(property));
         }
             
-=======
-                PropertyChanged(this, new PropertyChangedEventArgs(property));
-        }
-
->>>>>>> a25158f (Initial commit)
     }
 }

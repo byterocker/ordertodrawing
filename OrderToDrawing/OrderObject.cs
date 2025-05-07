@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-<<<<<<< HEAD
 using System.Text;
-=======
->>>>>>> a25158f (Initial commit)
 
 namespace OrderToDrawing
 {

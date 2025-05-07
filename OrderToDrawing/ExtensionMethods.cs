@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,14 +9,6 @@ using System.Windows.Threading;
 
 
 using System.Windows.Controls;
-=======
-﻿using OrderToDrawing.Models;
-using System;
-using System.Collections.Generic;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Threading;
->>>>>>> a25158f (Initial commit)
 
 namespace OrderToDrawing
 {
@@ -39,11 +30,7 @@ namespace OrderToDrawing
                 txtBox.Text = txt;
             }));
         }
-<<<<<<< HEAD
         public static void Refresh_listbox(this ListBox LSTBox, List<OrderObject> LST)
-=======
-        public static void Refresh_listbox(this ListBox LSTBox, List<ACAD_SerialNumber> LST)
->>>>>>> a25158f (Initial commit)
         {
 
             LSTBox.Dispatcher.Invoke(DispatcherPriority.SystemIdle, new Action(() =>
@@ -82,11 +69,7 @@ namespace OrderToDrawing
         /// <param name="singleWildcard">Character which can be used to replace any single character in input string.</param>
         /// <param name="multipleWildcard">Character which can be used to replace zero or more characters in input string.</param>
         /// <returns>true if <paramref name="pat"/> matches the string <paramref name="str"/>; otherwise false.</returns>
-<<<<<<< HEAD
         public static bool IsMatch (this string input, string pattern, char singleWildcard, char multipleWildcard)
-=======
-        public static bool IsMatch(this string input, string pattern, char singleWildcard, char multipleWildcard)
->>>>>>> a25158f (Initial commit)
         {
 
             int[] inputPosStack = new int[(input.Length + 1) * (pattern.Length + 1)];   // Stack containing input positions that should be tested for further matching
@@ -168,10 +151,6 @@ namespace OrderToDrawing
             return matched;
 
         }
-<<<<<<< HEAD
         
-=======
-
->>>>>>> a25158f (Initial commit)
     }
 }
