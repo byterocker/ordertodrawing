@@ -1,0 +1,74 @@
+﻿<Window x:Class="OrderToDrawing.WindowForPreferences"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OrderToDrawing"
+        mc:Ignorable="d"
+        ResizeMode="NoResize"
+<<<<<<< HEAD
+        Title="WindowForPreferences" Height="870" Width="500">
+    <Grid>
+        <StackPanel>
+            <Label Content="CSV Searching Path" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top"/>
+            <TextBox HorizontalAlignment="Left" Height="23" Margin="10,0,0,0" TextWrapping="Wrap" Text="{Binding Path=CSVSearchingPath, Mode=TwoWay}" VerticalAlignment="Top" Width="452"/>
+=======
+        Title="WindowForPreferences" Height="960" Width="500">
+    <Grid>
+        <StackPanel>
+            <Label Content="Connection String" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top"/>
+            <TextBox HorizontalAlignment="Left" Height="23" Margin="10,0,0,0" TextWrapping="Wrap" Text="{Binding Path=ConnectionString, Mode=TwoWay}" VerticalAlignment="Top" Width="452"/>
+            <Label Content="Json Searching Path" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top"/>
+            <TextBox HorizontalAlignment="Left" Height="23" Margin="10,0,0,0" TextWrapping="Wrap" Text="{Binding Path=JsonSearchingPath, Mode=TwoWay}" VerticalAlignment="Top" Width="452"/>
+>>>>>>> a25158f (Initial commit)
+            <Label Content="CSV Namensfilter" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top"/>
+            <TextBox HorizontalAlignment="Left" Height="23" Margin="10,0,0,0" TextWrapping="Wrap" Text="{Binding Path=NamingRule, Mode=TwoWay}" VerticalAlignment="Top" Width="452"/>
+            <Label Content="CSV Namensfilter (ignorieren)" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top"/>
+            <TextBox HorizontalAlignment="Left" Height="23" Margin="10,0,0,0" TextWrapping="Wrap" Text="{Binding Path=NamingRuleIgnore, Mode=TwoWay}" VerticalAlignment="Top" Width="452"/>
+            <Label Content="CSV Output Path" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top"/>
+            <TextBox HorizontalAlignment="Left" Height="23" Margin="10,0,0,0" TextWrapping="Wrap" Text="{Binding Path=CSVOutputPath, Mode=TwoWay}" VerticalAlignment="Top" Width="452"/>
+            <Label Content="PDS File Searching Path" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top"/>
+            <TextBox HorizontalAlignment="Left" Height="23" Margin="10,0,0,0" TextWrapping="Wrap" Text="{Binding Path=PDSSearchingPath, Mode=TwoWay}" VerticalAlignment="Top" Width="452"/>
+            <Label Content="DWG Output Path" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top"/>
+            <TextBox HorizontalAlignment="Left" Height="23" Margin="10,0,0,0" TextWrapping="Wrap" Text="{Binding Path=DWGOutputPath, Mode=TwoWay}" VerticalAlignment="Top" Width="452"/>
+            <Label Content="DWG Searching Path" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top"/>
+            <TextBox HorizontalAlignment="Left" Height="23" Margin="10,0,0,0" TextWrapping="Wrap" Text="{Binding Path=DWGSearchingPath, Mode=TwoWay}" VerticalAlignment="Top" Width="452"/>
+            <Label Content="DWG Order Copy Path" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top"/>
+            <TextBox HorizontalAlignment="Left" Height="23" Margin="10,0,0,0" TextWrapping="Wrap" Text="{Binding Path=DWGOrderCopyPath, Mode=TwoWay}" VerticalAlignment="Top" Width="452"/>
+            <Label Content="Serial Number Blocks:" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top"/>
+            <TextBox HorizontalAlignment="Left" Height="23" Margin="10,0,0,0" TextWrapping="Wrap" Text="{Binding Path=SerialBlocks, Mode=TwoWay}" VerticalAlignment="Top" Width="452"/>
+            <Label Content="No PDS Artikel (keine Seriennummer schreiben, aber DWG erstellen)" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top"/>
+            <TextBox HorizontalAlignment="Left" Height="23" Margin="10,0,0,0" TextWrapping="Wrap" Text="{Binding Path=NoPDSArtikel, Mode=TwoWay}" VerticalAlignment="Top" Width="452"/>
+            <Label Content="zu ignorierende Artikel" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top"/>
+            <TextBox HorizontalAlignment="Left" Height="23" Margin="10,0,0,0" TextWrapping="Wrap" Text="{Binding Path=IgnoreArtikel, Mode=TwoWay}" VerticalAlignment="Top" Width="452"/>
+            <Label Content="Serial Number Attributes:" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top"/>
+            <TextBox HorizontalAlignment="Left" Height="23" Margin="10,0,0,0" TextWrapping="Wrap" Text="{Binding Path=SerialAtts, Mode=TwoWay}" VerticalAlignment="Top" Width="452"/>
+            <Label Content="ScriptFile Path:" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top"/>
+            <TextBox HorizontalAlignment="Left" Height="23" Margin="10,0,0,0" TextWrapping="Wrap" Text="{Binding Path=ScriptFile, Mode=TwoWay}" VerticalAlignment="Top" Width="452"/>
+            <Label Content="End ScriptFile Path:" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top"/>
+            <TextBox HorizontalAlignment="Left" Height="23" Margin="10,0,0,0" TextWrapping="Wrap" Text="{Binding Path=ScriptFile2, Mode=TwoWay}" VerticalAlignment="Top" Width="452"/>
+<<<<<<< HEAD
+            <Label Content="Error Path:" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top"/>
+            <TextBox HorizontalAlignment="Left" Height="23" Margin="10,0,0,0" TextWrapping="Wrap" Text="{Binding Path=ErrorPath, Mode=TwoWay}" VerticalAlignment="Top" Width="452"/>
+            <Label Content="Config Path:" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top"/>
+            <TextBox HorizontalAlignment="Left" Height="23" Margin="10,0,0,0" TextWrapping="Wrap" Text="{Binding Path=ConfigPath, Mode=TwoWay}" VerticalAlignment="Top" Width="452"/>
+            <CheckBox Content="Plot" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10,10,10,10" IsChecked="{Binding Path=Plot, Mode=TwoWay}"/>
+            
+=======
+            <Label Content="Log Path:" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top"/>
+            <TextBox HorizontalAlignment="Left" Height="23" Margin="10,0,0,0" TextWrapping="Wrap" Text="{Binding Path=ErrorPath, Mode=TwoWay}" VerticalAlignment="Top" Width="452"/>
+            <Label Content="Config Path:" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top"/>
+            <TextBox HorizontalAlignment="Left" Height="23" Margin="10,0,0,0" TextWrapping="Wrap" Text="{Binding Path=ConfigPath, Mode=TwoWay}" VerticalAlignment="Top" Width="452"/>
+            <CheckBox Content="Plot" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10,10,10,0" IsChecked="{Binding Path=Plot, Mode=TwoWay}"/>
+            <CheckBox Content="Object Identificator as Block" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10,10,10,10" IsChecked="{Binding Path=ObjectIdentificatorAsBlock, Mode=TwoWay}"/>
+
+
+>>>>>>> a25158f (Initial commit)
+
+
+        </StackPanel>
+        <Button Content="Back" Margin="10,10" VerticalAlignment="Bottom" HorizontalAlignment="Left" Height="20" Width="80" Click="Button_Click"/>
+        <CheckBox Content="LogFileMode" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="120,10" IsChecked="{Binding Path=LogFileMode, Mode=TwoWay}"/>
+        <CheckBox Content="HeaderMode" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="20,10" IsChecked="{Binding Path=HeaderMode, Mode=TwoWay}"/>
+    </Grid>
+</Window>
