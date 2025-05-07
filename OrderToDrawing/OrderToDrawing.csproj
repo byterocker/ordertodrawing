@@ -2,8 +2,9 @@
   <PropertyGroup>
     <TargetFramework>net8.0-windows</TargetFramework>
     <OutputType>WinExe</OutputType>
+    <AssemblyName>OrderToDrawing_COIN</AssemblyName>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>\\wipfil32\CTXSR\OrderToDrawing\</PublishUrl>
+    <PublishUrl>\\wipfil32\CTXSR\OrderToDrawingCOIN\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>true</UpdateEnabled>
@@ -13,11 +14,13 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <UpdateUrl>\\wipfil32\CTXSR\OrderToDrawing\</UpdateUrl>
+    <UpdateUrl>\\wipfil32\CTXSR\OrderToDrawingCOIN\</UpdateUrl>
+    <TargetCulture>en</TargetCulture>
+    <PublisherName>CONTAINEX</PublisherName>
     <WebPage>publish.htm</WebPage>
     <AutorunEnabled>true</AutorunEnabled>
-    <ApplicationRevision>123</ApplicationRevision>
-    <ApplicationVersion>1.1.0.%2a</ApplicationVersion>
+    <ApplicationRevision>30</ApplicationRevision>
+    <ApplicationVersion>1.2.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
@@ -43,6 +46,10 @@
   <PropertyGroup>
     <SignManifests>true</SignManifests>
   </PropertyGroup>
+  <ItemGroup>
+    <None Include="OrderToDrawing_1_TemporaryKey.pfx" />
+    <None Include="OrderToDrawing_TemporaryKey.pfx" />
+  </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
@@ -142,10 +149,19 @@
     </PublishFile>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="AutoCAD.NET" Version="25.0.1" />
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AutoCAD.NET" Version="25.1.0" />
     <PackageReference Include="AutoCAD.NET.Interop" Version="2025.25.0.58" />
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.10" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
     <PackageReference Include="System.Configuration.ConfigurationManager" Version="9.0.4" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="TeamcenterJsonConverter_old.cs" />
+    <Compile Remove="TeamcenterJsonConverter_old2.cs" />
   </ItemGroup>
 </Project>

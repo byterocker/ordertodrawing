@@ -3,37 +3,37 @@
   <Profiles />
   <Settings>
     <Setting Name="CSVSearchingPath" Type="System.String" Scope="User">
-      <Value Profile="(Default)">C:\Temp\</Value>
+      <Value Profile="(Default)">\\WIPFIL02\InforLNTest\ACAD\Seriennummernfiles\</Value>
     </Setting>
     <Setting Name="DWGOutputPath" Type="System.String" Scope="User">
-      <Value Profile="(Default)">C:\Temp\</Value>
+      <Value Profile="(Default)">\\WIPFIL02\InforLNTest\ACAD\BestellskizzenNeu\</Value>
     </Setting>
     <Setting Name="DWGSearchingPath" Type="System.String" Scope="User">
-      <Value Profile="(Default)">C:\Temp\</Value>
+      <Value Profile="(Default)">\\wiptcr05\sbomi\dwg\</Value>
     </Setting>
     <Setting Name="CSVOutputPath" Type="System.String" Scope="User">
-      <Value Profile="(Default)">C:\Temp\</Value>
+      <Value Profile="(Default)">\\WIPFIL02\InforLNTest\ACAD\Archiv\</Value>
     </Setting>
     <Setting Name="PDSSearchingPath" Type="System.String" Scope="User">
-      <Value Profile="(Default)">C:\Temp\</Value>
+      <Value Profile="(Default)">\\wiptcr05\sbomi\dwg\</Value>
     </Setting>
     <Setting Name="SerialBlocks" Type="System.String" Scope="User">
-      <Value Profile="(Default)">ra_ra*,test_*</Value>
+      <Value Profile="(Default)">ra_ra*,ra_ga*,stahl_aus_trep*,wcbox_RAHM*,terr_ra_*,basic_ra_*,stahl_treppencont*,tholz_ra_*,pl_ra*</Value>
     </Setting>
     <Setting Name="SerialAtts" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">183_CNR,0001_CNR</Value>
     </Setting>
     <Setting Name="EventCounter" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
     <Setting Name="ScriptFile" Type="System.String" Scope="User">
-      <Value Profile="(Default)">C:\Temp\Test.scr</Value>
+      <Value Profile="(Default)">\\wipfil32\Process\PDS\bat\ctx_pds_bs_infor.scr</Value>
     </Setting>
     <Setting Name="ErrorPath" Type="System.String" Scope="User">
-      <Value Profile="(Default)">C:\Temp\</Value>
+      <Value Profile="(Default)">\\wiptcr05\sbomi\log\DWGtoOrderDWG\</Value>
     </Setting>
     <Setting Name="LogFileMode" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">False</Value>
+      <Value Profile="(Default)">True</Value>
     </Setting>
     <Setting Name="HeaderMode" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
@@ -42,10 +42,10 @@
       <Value Profile="(Default)">LC*</Value>
     </Setting>
     <Setting Name="DWGOrderCopyPath" Type="System.String" Scope="User">
-      <Value Profile="(Default)">H:\Offert-Bestellwesen\Bestellskizzen\InforLN\</Value>
+      <Value Profile="(Default)">\\shw04c\ContainexTechnik\Offert-Bestellwesen\Bestellskizzen\InforLN\</Value>
     </Setting>
     <Setting Name="IgnoreArtikel" Type="System.String" Scope="User">
-      <Value Profile="(Default)">MB*,IN*</Value>
+      <Value Profile="(Default)">MB*,IG*</Value>
     </Setting>
     <Setting Name="NamingRule" Type="System.String" Scope="User">
       <Value Profile="(Default)">*</Value>
@@ -54,13 +54,46 @@
       <Value Profile="(Default)">X</Value>
     </Setting>
     <Setting Name="ScriptFile2" Type="System.String" Scope="User">
-      <Value Profile="(Default)">C:\Temp\Test.scr</Value>
+      <Value Profile="(Default)">\\wipfil32\Process\PDS\bat\ctx_pds_bs_infor_end.scr</Value>
     </Setting>
     <Setting Name="Plot" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
+    <Setting Name="JsonSearchingPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">\\wiptcr05\sbomi\updated\</Value>
+    </Setting>
+    <Setting Name="MW_TC_LN_InterfaceConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+  &lt;ConnectionString&gt;Data Source=DBAG92;Initial Catalog=MW_TC_LN_Interface;Integrated Security=True&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=DBAG92;Initial Catalog=MW_TC_LN_Interface;Integrated Security=True</Value>
+    </Setting>
+    <Setting Name="ConnectionString" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Data Source=DBAG92;Initial Catalog=MW_TC_LN_Interface;Integrated Security=True</Value>
+    </Setting>
+    <Setting Name="MW_TC_LN_InterfaceConnectionString1" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+  &lt;ConnectionString&gt;Data Source=WITILN07\informig;Initial Catalog=MW_TC_LN_Interface;Integrated Security=True&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=WITILN07\informig;Initial Catalog=MW_TC_LN_Interface;Integrated Security=True</Value>
+    </Setting>
+    <Setting Name="DataSourceConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+  &lt;ConnectionString&gt;Data Source=dbag92;Integrated Security=True&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=dbag92;Integrated Security=True</Value>
+    </Setting>
     <Setting Name="ConfigPath" Type="System.String" Scope="User">
-      <Value Profile="(Default)">\\wipfil32\CTXSR\OrderToDrawing\user.config</Value>
+      <Value Profile="(Default)">\\wipfil32\CTXSR\OrderToDrawingCOIN\user.config</Value>
+    </Setting>
+    <Setting Name="ObjectIdentificatorAsBlock" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
     </Setting>
   </Settings>
 </SettingsFile>

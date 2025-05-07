@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.IO;
 using System.Windows;
 
@@ -13,7 +8,8 @@ namespace OrderToDrawing
     {
         private string namingRule;
         private string namingRuleIgnore;
-        private string csvsearchingpath;
+        private string connectionString;
+        private string jsonSearchingPath;
         private string pdssearchingpath;
         private string dwgsearchingpath;
         private string dwgoutputPath;
@@ -24,9 +20,10 @@ namespace OrderToDrawing
         private string serialAtts;
         private string scriptfile;
         private string scriptfile2;
-        private string configPath;
         private string errorpath;
+        private string configPath;
         private string ignoreArtikel;
+        private bool objectIdentificatorAsBlock;
         private bool logfileMode;
         private bool plot;
         private bool headerMode;
@@ -94,55 +91,57 @@ namespace OrderToDrawing
                 Properties.Settings.Default.LogFileMode = logfileMode;
                 Properties.Settings.Default.Save();
                 OnPropertyChanged("LogFileMode");
-                
+
             }
         }
-        public string CSVSearchingPath
+        public bool ObjectIdentificatorAsBlock
         {
-            get { return csvsearchingpath; }
+            get { return objectIdentificatorAsBlock; }
+            set
+            {
+                objectIdentificatorAsBlock = value;
+                Properties.Settings.Default.ObjectIdentificatorAsBlock = objectIdentificatorAsBlock;
+                Properties.Settings.Default.Save();
+                OnPropertyChanged("ObjectIdentificatorAsBlock");
+
+            }
+        }
+        public string ConnectionString
+        {
+            get { return connectionString; }
+            set
+            {
+                if (value != null)
+                {
+                    connectionString = value;
+                    Properties.Settings.Default.ConnectionString = value;
+                    Properties.Settings.Default.Save();
+                    OnPropertyChanged("ConnectionString");
+                }
+            }
+        }
+        public string JsonSearchingPath
+        {
+            get { return jsonSearchingPath; }
             set
             {
                 if (value != null)
                 {
                     if (!value.EndsWith("\\"))
-                        csvsearchingpath = value.TrimEnd('"') + "\\";
+                        jsonSearchingPath = value.TrimEnd('"') + "\\";
                     else
-                        csvsearchingpath = value.TrimEnd('"');
-                    if (!Directory.Exists(csvsearchingpath))
+                        jsonSearchingPath = value.TrimEnd('"');
+                    if (!Directory.Exists(jsonSearchingPath))
                     {
-                        MessageBox.Show($"Der Ordner {csvsearchingpath} existiert nicht");
-                        csvsearchingpath = Properties.Settings.Default.CSVSearchingPath;
+                        MessageBox.Show($"Der Ordner {jsonSearchingPath} existiert nicht");
+                        jsonSearchingPath = Properties.Settings.Default.JsonSearchingPath;
                     }
                     else
                     {
-                        Properties.Settings.Default.CSVSearchingPath = csvsearchingpath;
+                        Properties.Settings.Default.JsonSearchingPath = jsonSearchingPath;
                         Properties.Settings.Default.Save();
-                        OnPropertyChanged("CSVSearchingPath");
+                        OnPropertyChanged("JsonSearchingPath");
                     }
-                }
-            }
-        }
-        public string ConfigPath
-        {
-            get { return configPath; }
-            set
-            {
-                if (value == null)
-                    configPath = null;
-                else if (!value.EndsWith(".config"))
-                    configPath = value.TrimEnd('"') + ".config";
-                else
-                    configPath = value.TrimEnd('"');
-                if (!(configPath == null) && !File.Exists(configPath))
-                {
-                    MessageBox.Show($"Das Config {configPath} existiert nicht");
-                    configPath = Properties.Settings.Default.ConfigPath;
-                }
-                else
-                {
-                    Properties.Settings.Default.ConfigPath = configPath;
-                    Properties.Settings.Default.Save();
-                    OnPropertyChanged("ConfigPath");
                 }
             }
         }
@@ -224,7 +223,7 @@ namespace OrderToDrawing
         public string DWGOutputPath
         {
             get { return dwgoutputPath; }
-            set 
+            set
             {
                 if (value != null)
                 {
@@ -301,14 +300,14 @@ namespace OrderToDrawing
             get { return noPDSArtikel; }
             set
             {
-                if (value!= null)
+                if (value != null)
                 {
                     noPDSArtikel = value.TrimEnd('"');
                     Properties.Settings.Default.NoPDSArtikel = noPDSArtikel;
                     Properties.Settings.Default.Save();
                     OnPropertyChanged("NoPDSArtikel");
                 }
-                
+
             }
         }
         public string IgnoreArtikel
@@ -316,14 +315,14 @@ namespace OrderToDrawing
             get { return ignoreArtikel; }
             set
             {
-                if (value!= null)
+                if (value != null)
                 {
                     ignoreArtikel = value.TrimEnd('"');
                     Properties.Settings.Default.IgnoreArtikel = ignoreArtikel;
                     Properties.Settings.Default.Save();
                     OnPropertyChanged("IgnoreArtikel");
                 }
-                
+
             }
         }
         public string SerialBlocks
@@ -391,7 +390,7 @@ namespace OrderToDrawing
                     scriptfile2 = value.TrimEnd('"');
                 if (!(scriptfile2 == null) && !File.Exists(scriptfile2))
                 {
-                    MessageBox.Show($"Das ScriptFile {scriptfile} existiert nicht");
+                    MessageBox.Show($"Das ScriptFile {scriptfile2} existiert nicht");
                     scriptfile2 = Properties.Settings.Default.ScriptFile2;
                 }
                 else
@@ -403,13 +402,38 @@ namespace OrderToDrawing
             }
         }
 
+        public string ConfigPath
+        {
+            get { return configPath; }
+            set
+            {
+                if (value == null)
+                    configPath = null;
+                else if (!value.EndsWith(".config"))
+                    configPath = value.TrimEnd('"') + ".config";
+                else
+                    configPath = value.TrimEnd('"');
+                if (!(configPath == null) && !File.Exists(configPath))
+                {
+                    MessageBox.Show($"Das Config {configPath} existiert nicht");
+                    configPath = Properties.Settings.Default.ConfigPath;
+                }
+                else
+                {
+                    Properties.Settings.Default.ConfigPath = configPath;
+                    Properties.Settings.Default.Save();
+                    OnPropertyChanged("ConfigPath");
+                }
+            }
+        }
+
         public event PropertyChangedEventHandler PropertyChanged;
 
         private void OnPropertyChanged(string property)
         {
             if (PropertyChanged != null)
-            PropertyChanged(this, new PropertyChangedEventArgs(property));
+                PropertyChanged(this, new PropertyChangedEventArgs(property));
         }
-            
+
     }
 }

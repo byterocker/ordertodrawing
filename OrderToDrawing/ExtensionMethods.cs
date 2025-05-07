@@ -1,14 +1,9 @@
-﻿using System;
+﻿using OrderToDrawing.Models;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Threading;
-
-
 using System.Windows.Controls;
+using System.Windows.Threading;
 
 namespace OrderToDrawing
 {
@@ -30,7 +25,7 @@ namespace OrderToDrawing
                 txtBox.Text = txt;
             }));
         }
-        public static void Refresh_listbox(this ListBox LSTBox, List<OrderObject> LST)
+        public static void Refresh_listbox(this ListBox LSTBox, List<ACAD_SerialNumber> LST)
         {
 
             LSTBox.Dispatcher.Invoke(DispatcherPriority.SystemIdle, new Action(() =>
@@ -69,7 +64,7 @@ namespace OrderToDrawing
         /// <param name="singleWildcard">Character which can be used to replace any single character in input string.</param>
         /// <param name="multipleWildcard">Character which can be used to replace zero or more characters in input string.</param>
         /// <returns>true if <paramref name="pat"/> matches the string <paramref name="str"/>; otherwise false.</returns>
-        public static bool IsMatch (this string input, string pattern, char singleWildcard, char multipleWildcard)
+        public static bool IsMatch(this string input, string pattern, char singleWildcard, char multipleWildcard)
         {
 
             int[] inputPosStack = new int[(input.Length + 1) * (pattern.Length + 1)];   // Stack containing input positions that should be tested for further matching
@@ -151,6 +146,6 @@ namespace OrderToDrawing
             return matched;
 
         }
-        
+
     }
 }

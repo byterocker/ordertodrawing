@@ -1,8 +1,7 @@
-﻿using System;
-using System.Windows;
+﻿using Autodesk.AutoCAD.Interop;
+using System;
 using System.Runtime.InteropServices;
-using System.Threading;
-using Autodesk.AutoCAD.Interop;
+using System.Windows;
 
 namespace LaunchAutoCAD
 {
@@ -35,7 +34,7 @@ namespace LaunchAutoCAD
 
         private AcadApplication acadApp;
         private bool isRunning;
-        public AcadApplication AcadApp 
+        public AcadApplication AcadApp
         {
             get
             {
@@ -47,7 +46,7 @@ namespace LaunchAutoCAD
         }
 
         public AcadConnection()
-        {    
+        {
         }
 
         private void StartAcad()

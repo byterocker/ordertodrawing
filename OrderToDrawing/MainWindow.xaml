@@ -8,7 +8,7 @@
         ResizeMode="NoResize"
         Title="DWG to OrderDWG" Height="660" Width="480">
     <Grid>
-        <Label Content="Infor Order to DWG Drawing" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label Content="Infor Order to DWG Drawing COIN" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" FontSize="16"/>
         <Label Content="Files to process:" HorizontalAlignment="Left" Margin="10,38,0,0" VerticalAlignment="Top" Height="25"/>
         <TextBox Name="CSVNumber" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="115,38,0,0" VerticalAlignment="Top" Width="336" IsReadOnly="True" Height="25" Background="{x:Null}" BorderBrush="{x:Null}"/>
         <Label Content="Current CSV:" HorizontalAlignment="Left" Margin="10,64,0,0" VerticalAlignment="Top" Height="25"/>
@@ -59,6 +59,9 @@
         <TextBox Name="TotalCSV" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="140,596,0,0" VerticalAlignment="Top" Width="304" IsReadOnly="True" Height="25" BorderBrush="{x:Null}" Background="{x:Null}"/>
         <Label Content="Markus Hoffmann" FontSize="9" HorizontalAlignment="Right" Margin="0,0,6,4" VerticalAlignment="Bottom"/>
         <TextBox Name="SettingsKeyTextBox" HorizontalAlignment="Left" Height="23" Margin="144,570,0,0" TextWrapping="Wrap" Text="TEST400" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged"/>
+
+
+
 
     </Grid>
 </Window>

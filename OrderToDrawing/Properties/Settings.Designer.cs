@@ -12,7 +12,7 @@ namespace OrderToDrawing.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.12.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.13.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -25,7 +25,7 @@ namespace OrderToDrawing.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Temp\\")]
+        [global::System.Configuration.DefaultSettingValueAttribute("\\\\WIPFIL02\\InforLNTest\\ACAD\\Seriennummernfiles\\")]
         public string CSVSearchingPath {
             get {
                 return ((string)(this["CSVSearchingPath"]));
@@ -37,7 +37,7 @@ namespace OrderToDrawing.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Temp\\")]
+        [global::System.Configuration.DefaultSettingValueAttribute("\\\\WIPFIL02\\InforLNTest\\ACAD\\BestellskizzenNeu\\")]
         public string DWGOutputPath {
             get {
                 return ((string)(this["DWGOutputPath"]));
@@ -49,7 +49,7 @@ namespace OrderToDrawing.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Temp\\")]
+        [global::System.Configuration.DefaultSettingValueAttribute("\\\\wiptcr05\\sbomi\\dwg\\")]
         public string DWGSearchingPath {
             get {
                 return ((string)(this["DWGSearchingPath"]));
@@ -61,7 +61,7 @@ namespace OrderToDrawing.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Temp\\")]
+        [global::System.Configuration.DefaultSettingValueAttribute("\\\\WIPFIL02\\InforLNTest\\ACAD\\Archiv\\")]
         public string CSVOutputPath {
             get {
                 return ((string)(this["CSVOutputPath"]));
@@ -73,7 +73,7 @@ namespace OrderToDrawing.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Temp\\")]
+        [global::System.Configuration.DefaultSettingValueAttribute("\\\\wiptcr05\\sbomi\\dwg\\")]
         public string PDSSearchingPath {
             get {
                 return ((string)(this["PDSSearchingPath"]));
@@ -85,7 +85,8 @@ namespace OrderToDrawing.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("ra_ra*,test_*")]
+        [global::System.Configuration.DefaultSettingValueAttribute("ra_ra*,ra_ga*,stahl_aus_trep*,wcbox_RAHM*,terr_ra_*,basic_ra_*,stahl_treppencont*" +
+            ",tholz_ra_*,pl_ra*")]
         public string SerialBlocks {
             get {
                 return ((string)(this["SerialBlocks"]));
@@ -97,7 +98,7 @@ namespace OrderToDrawing.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("183_CNR,0001_CNR")]
         public string SerialAtts {
             get {
                 return ((string)(this["SerialAtts"]));
@@ -121,7 +122,7 @@ namespace OrderToDrawing.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Temp\\Test.scr")]
+        [global::System.Configuration.DefaultSettingValueAttribute("\\\\wipfil32\\Process\\PDS\\bat\\ctx_pds_bs_infor.scr")]
         public string ScriptFile {
             get {
                 return ((string)(this["ScriptFile"]));
@@ -133,7 +134,7 @@ namespace OrderToDrawing.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Temp\\")]
+        [global::System.Configuration.DefaultSettingValueAttribute("\\\\wiptcr05\\sbomi\\log\\DWGtoOrderDWG\\")]
         public string ErrorPath {
             get {
                 return ((string)(this["ErrorPath"]));
@@ -145,7 +146,7 @@ namespace OrderToDrawing.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
         public bool LogFileMode {
             get {
                 return ((bool)(this["LogFileMode"]));
@@ -181,7 +182,7 @@ namespace OrderToDrawing.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("H:\\Offert-Bestellwesen\\Bestellskizzen\\InforLN\\")]
+        [global::System.Configuration.DefaultSettingValueAttribute("\\\\shw04c\\ContainexTechnik\\Offert-Bestellwesen\\Bestellskizzen\\InforLN\\")]
         public string DWGOrderCopyPath {
             get {
                 return ((string)(this["DWGOrderCopyPath"]));
@@ -193,7 +194,7 @@ namespace OrderToDrawing.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("MB*,IN*")]
+        [global::System.Configuration.DefaultSettingValueAttribute("MB*,IG*")]
         public string IgnoreArtikel {
             get {
                 return ((string)(this["IgnoreArtikel"]));
@@ -229,7 +230,7 @@ namespace OrderToDrawing.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Temp\\Test.scr")]
+        [global::System.Configuration.DefaultSettingValueAttribute("\\\\wipfil32\\Process\\PDS\\bat\\ctx_pds_bs_infor_end.scr")]
         public string ScriptFile2 {
             get {
                 return ((string)(this["ScriptFile2"]));
@@ -253,13 +254,80 @@ namespace OrderToDrawing.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("\\\\wipfil32\\CTXSR\\OrderToDrawing\\user.config")]
+        [global::System.Configuration.DefaultSettingValueAttribute("\\\\wiptcr05\\sbomi\\updated\\")]
+        public string JsonSearchingPath {
+            get {
+                return ((string)(this["JsonSearchingPath"]));
+            }
+            set {
+                this["JsonSearchingPath"] = value;
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DBAG92;Initial Catalog=MW_TC_LN_Interface;Integrated Security=True")]
+        public string MW_TC_LN_InterfaceConnectionString {
+            get {
+                return ((string)(this["MW_TC_LN_InterfaceConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DBAG92;Initial Catalog=MW_TC_LN_Interface;Integrated Security=True")]
+        public string ConnectionString {
+            get {
+                return ((string)(this["ConnectionString"]));
+            }
+            set {
+                this["ConnectionString"] = value;
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=WITILN07\\informig;Initial Catalog=MW_TC_LN_Interface;Integrated Secur" +
+            "ity=True")]
+        public string MW_TC_LN_InterfaceConnectionString1 {
+            get {
+                return ((string)(this["MW_TC_LN_InterfaceConnectionString1"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=dbag92;Integrated Security=True")]
+        public string DataSourceConnectionString {
+            get {
+                return ((string)(this["DataSourceConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("\\\\wipfil32\\CTXSR\\OrderToDrawingCOIN\\user.config")]
         public string ConfigPath {
             get {
                 return ((string)(this["ConfigPath"]));
             }
             set {
                 this["ConfigPath"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool ObjectIdentificatorAsBlock {
+            get {
+                return ((bool)(this["ObjectIdentificatorAsBlock"]));
+            }
+            set {
+                this["ObjectIdentificatorAsBlock"] = value;
             }
         }
     }

@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
 
 namespace OrderToDrawing
 {
@@ -16,6 +12,21 @@ namespace OrderToDrawing
 
         public Log()
         {
+
+        }
+        public void Delete(string path, string forFile)
+        {
+            try
+            {
+                SavingPath = path + forFile + ".log";
+                if (File.Exists(@SavingPath))
+                {
+                    File.Delete(@SavingPath);
+                }
+            }
+            catch (Exception)
+            {
+            }
 
         }
         public void Open(string path, string forFile)
@@ -50,10 +61,11 @@ namespace OrderToDrawing
             {
                 //MessageBox.Show(ex.ToString());
             }
-            
+
         }
         public void LogMsg(string Msg)
         {
+            Debug.WriteLine(Msg);
             try
             {
                 if (myWriter != null)
@@ -62,13 +74,13 @@ namespace OrderToDrawing
                     myWriter.Flush();
                 }
                 //else
-                    //MessageBox.Show("There is no LogFile Streamwriter!");
+                //MessageBox.Show("There is no LogFile Streamwriter!");
             }
             catch (Exception ex)
             {
                 //MessageBox.Show(ex.ToString());
             }
-            
+
         }
         public void Close()
         {
@@ -82,14 +94,14 @@ namespace OrderToDrawing
                     myWriter = null;
                 }
                 //else
-                    //MessageBox.Show("There is no LogFile Streamwriter!");
+                //MessageBox.Show("There is no LogFile Streamwriter!");
             }
-            catch (Exception  ex)
+            catch (Exception ex)
             {
                 //MessageBox.Show(ex.ToString());
             }
-            
-            
+
+
         }
 
     }
